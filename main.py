@@ -77,4 +77,4 @@ async def sync(ctx, guilds: Greedy[discord.Object], spec: Optional[Literal["gl"]
             return await ctx.send(f"**Syncronisierung Fehlgeschlagen!**\nRatelimit exceeded. Bitte versuche es in einpaar Minuten erneut.```{e}```")
     return await ctx.reply(conf().EMBED_ERROR_PERMISSION(description="ctx.author.id == config.USER_ME_ID"))
         
-client.run('MTE0MzUxOTIxNDQ5MDEwMzgzMg.GMEV01.6Iz1qNoJZIGTFRMnMADtpn7bdccxBX8rsxUeSw')
+client.run(config.CLIENT_APPLICATION_TOKEN)
