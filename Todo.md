@@ -3,26 +3,31 @@
 ### Develper Tools
 - [ ] dev tools
     - Gives a set of Tools like rgb to hex etc
-    - [ ] Slashcommand
+    - [ ] Slashcommand for group
 
 ### Settings
 - [ ] Bot's Guild settings
-    - [ ] Slashcommand
+    - [x] Slashcommand for group
     - [ ] Opens a window with all possible settings
         - [ ] AutoThread
-            - [ ] Slashcommand group
+            - [ ] Slashcommand
+                - Opens a window with all possible settings
             - [ ] ThreadName
-                - [ ] Slashcommand: str options
+                - [ ] Slashcommand
+                - [ ] Callback for AutoThread-setting Embed
                 - [ ] Modal "Thread optionen"
             - [ ] Thead first message
-                - [ ] Slashcommand str option
+                - [ ] Slashcommand
+                - [ ] Callback for AutoThread-setting Embed
                 - [ ] Modal "Thread optionen"
             - [ ] Thread Cooldown
                 - [ ] Slashcommand
+                - [ ] Callback for AutoThread-setting Embed
                 - [ ] Modal "Thread optionen": str option, in seconds
             - [ ] Auto Theadrename
                 - Automaticly Edit Threadnames from any created User to a form
                 - [ ] Slashcommand
+                - [ ] Callback for AutoThread-setting Embed
                     - Use 3 Slash options as placeholder
                     - Possible Options:
                         - username
@@ -31,17 +36,20 @@
                         - date (dd/mm/yyyy)
         - [ ] Logs
             - [ ] Slashcommand
+            - Join/Leave
+            - Message edit, delete, pin (option: exempt bot)
+            - Threads (option: exempt bot)
         - [ ] Anti-Link
             - [ ] Slashcommand
             - Regex Option
             - Invite option (auto-exepmt that guild's list)
             - Custom Text Option
         - [ ] Support System
+            - [ ] Slashcommand for group
             - [ ] Ticket System
-            - [ ] Slashcommand
                 - 5 Custromizable Ticket Buttons/Panels
                     - [ ] Embed setting
-                - One "Moderation" Ticket für user and message
+                - 1 "Moderation" Ticket für user and message
                     - Opens a ticket for a user by a Moderator, in case they need to get warned specificly in privat, but still with logs.
                 - Ticket Logs
             - [ ] Support Talk System
@@ -52,6 +60,7 @@
 
 ### Others
 - [x] Bot Info
+    - [x] Slashcommand
 - [x] User Info
     - [x] Slashcommand
     - [x] Context Menu User
