@@ -48,13 +48,13 @@ class MyBot(commands.Bot):
         """Import Buttons for Forceload"""
         self.add_view(error_rapport_del())
     
-        await self.load_extension(f"config")
+        await self.load_extension("config")
 
-        await self.load_extension(f"cogs.devpage")
-        await self.load_extension(f"cogs.settingpage")
+        await self.load_extension("cogs.devpage")
+        await self.load_extension("cogs.settingpage")
 
-        await self.load_extension(f"cogs.info_only.bot_info")
-        await self.load_extension(f"cogs.info_only.user_info")
+        await self.load_extension("cogs.info_only.bot_info")
+        await self.load_extension("cogs.info_only.user_info")
 
 client = MyBot()
 

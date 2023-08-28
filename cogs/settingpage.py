@@ -19,7 +19,12 @@ class settings(commands.GroupCog, name="einstellung"):
             title="Einstellungen",
             description="Sämtliche Server und Bot Einstellungen ansehen und bearbeiten.",
         )
-        embed.add_field(name="modul", value="befehl")
+        embed.add_field(name="Auto Thread", value="Thread Einstellungen ändern.\ncmd", inline=False)
+        embed.add_field(name="Loggin", value="Log Einstellungen ändern.\ncmd", inline=False)
+        embed.add_field(name="URL/Link Filter", value="Filter Einstellungen ändern.\ncmd", inline=False)
+        embed.add_field(name="Support System", value="Support Einstellungen ändern."
+                        "- Ticket System"
+                        "- Support Talk Benachrichtigung", inline=False)
         await interaction.response.send_message(embed=embed)
         return
 
