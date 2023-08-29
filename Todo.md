@@ -11,6 +11,7 @@
     - [ ] Opens a window with all possible settings
         - [ ] AutoThread
             - [ ] Slashcommand
+            - [x] Database
                 - Opens a window with all possible settings
             - [ ] ThreadName
                 - [ ] Slashcommand
@@ -36,16 +37,19 @@
                         - date (dd/mm/yyyy)
         - [ ] Logs
             - [ ] Slashcommand
+            - [ ] Database
             - Join/Leave
             - Message edit, delete, pin (option: exempt bot)
             - Threads (option: exempt bot)
         - [ ] Anti-Link
             - [ ] Slashcommand
+            - [ ] Database
             - Regex Option
             - Invite option (auto-exepmt that guild's list)
             - Custom Text Option
         - [ ] Support System
             - [ ] Slashcommand for group
+            - [ ] Database
             - [ ] Ticket System
                 - 5 Custromizable Ticket Buttons/Panels
                     - [ ] Embed setting
@@ -74,4 +78,5 @@
         - 3 custom Field settings
 - [ ] Giveaway
     - [ ] Slashcommand
+    - [ ] Database
 
