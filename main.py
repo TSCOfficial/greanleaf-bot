@@ -1,3 +1,4 @@
+import imp
 import discord
 from discord.ext import commands, tasks
 import pytz
@@ -11,6 +12,7 @@ import os
 #config
 import config as config
 from config import conf, error_rapport_del
+from cogs.settings.settingpage import goto_settinghome, setting_buttons
 
 timezone = pytz.timezone("Europe/Berlin")
 
@@ -47,12 +49,14 @@ class MyBot(commands.Bot):
     async def setup_hook(self):
         """Import Buttons for Forceload"""
         self.add_view(error_rapport_del())
+        self.add_view(setting_buttons())
+        self.add_view(goto_settinghome())
     
         await self.load_extension("config")
 
         await self.load_extension("cogs.devpage")
-        await self.load_extension("cogs.settings.settingpage")
         await self.load_extension("cogs.settings.autothread")
+        await self.load_extension("cogs.settings.settingpage")
 
         await self.load_extension("cogs.info_only.bot_info")
         await self.load_extension("cogs.info_only.user_info")
