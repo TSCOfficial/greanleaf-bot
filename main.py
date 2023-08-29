@@ -51,7 +51,8 @@ class MyBot(commands.Bot):
         await self.load_extension("config")
 
         await self.load_extension("cogs.devpage")
-        await self.load_extension("cogs.settingpage")
+        await self.load_extension("cogs.settings.settingpage")
+        await self.load_extension("cogs.settings.autothread")
 
         await self.load_extension("cogs.info_only.bot_info")
         await self.load_extension("cogs.info_only.user_info")

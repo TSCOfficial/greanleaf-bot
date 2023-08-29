@@ -1,5 +1,4 @@
 # Todo List
-## Commands
 ### Develper Tools
 - [ ] dev tools
     - Gives a set of Tools like rgb to hex etc
