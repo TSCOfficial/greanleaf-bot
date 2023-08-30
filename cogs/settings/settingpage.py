@@ -7,6 +7,9 @@ from discord import Interaction, app_commands
 import config as config
 from config import conf
 from cogs.settings.autothread import get_autothread_overview
+from cogs.settings.filter import get_filter_overview
+from cogs.settings.support import get_support_overview
+from cogs.settings.logs import get_logs_overview
 
 async def get_settings_overview(interaction):
     embed = await conf().EMBED(
@@ -46,19 +49,19 @@ class setting_buttons(discord.ui.View):
     
     @discord.ui.button(style=discord.ButtonStyle.gray, label="Support System", custom_id="setting_supsystem", emoji=config.EMOJI_TICKET)
     async def goto_supsystem(self, interaction: discord.Interaction, button: discord.Button):
-        embed = await get_autothread_overview(interaction=interaction)
+        embed = await get_support_overview(interaction=interaction)
         await interaction.response.edit_message(embed=embed, view=goto_settinghome())
         return
     
     @discord.ui.button(style=discord.ButtonStyle.gray, label="URL Filter", custom_id="setting_filter", emoji=config.EMOJI_FILTER)
     async def goto_urlfilter(self, interaction: discord.Interaction, button: discord.Button):
-        embed = await get_autothread_overview(interaction=interaction)
+        embed = await get_filter_overview(interaction=interaction)
         await interaction.response.edit_message(embed=embed, view=goto_settinghome())
         return
     
     @discord.ui.button(style=discord.ButtonStyle.gray, label="Logs", custom_id="setting_logs", emoji=config.EMOJI_LOGS)
     async def goto_logs(self, interaction: discord.Interaction, button: discord.Button):
-        embed = await get_autothread_overview(interaction=interaction)
+        embed = await get_logs_overview(interaction=interaction)
         await interaction.response.edit_message(embed=embed, view=goto_settinghome())
         return
 

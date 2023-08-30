@@ -9,7 +9,7 @@
     - [x] Slashcommand for group
     - [ ] Opens a window with all possible settings
         - [ ] AutoThread
-            - [ ] Slashcommand
+            - [x] Slashcommand
             - [x] Database
                 - Opens a window with all possible settings
             - [ ] ThreadName
@@ -24,16 +24,17 @@
                 - [ ] Slashcommand
                 - [ ] Callback for AutoThread-setting Embed
                 - [ ] Modal "Thread optionen": str option, in seconds
-            - [ ] Auto Theadrename
-                - Automaticly Edit Threadnames from any created User to a form
-                - [ ] Slashcommand
-                - [ ] Callback for AutoThread-setting Embed
-                    - Use 3 Slash options as placeholder
-                    - Possible Options:
-                        - username
-                        - user id
-                        - custom Text
-                        - date (dd/mm/yyyy)
+            - [ ] Charachter limit for creating Thread
+        - [ ] Auto Theadrename
+            - Automaticly Edit Threadnames from any created User to a form
+            - [ ] Slashcommand
+            - [ ] Callback for AutoThread-setting Embed
+                - Use 3 Slash options as placeholder
+                - Possible Options:
+                    - username
+                    - user id
+                    - custom Text
+                    - date (dd/mm/yyyy)
         - [ ] Logs
             - [ ] Slashcommand
             - [ ] Database

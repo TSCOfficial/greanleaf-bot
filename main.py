@@ -1,4 +1,3 @@
-import imp
 import discord
 from discord.ext import commands, tasks
 import pytz
@@ -44,39 +43,49 @@ class MyBot(commands.Bot):
                 return exit(404)
             await asyncio.sleep(300) #5min
             
-            
-        
+
     async def setup_hook(self):
         """Import Buttons for Forceload"""
         self.add_view(error_rapport_del())
         self.add_view(setting_buttons())
         self.add_view(goto_settinghome())
     
-        await self.load_extension("config")
+        #await self.load_extension("config")
 
-        await self.load_extension("cogs.devpage")
-        await self.load_extension("cogs.settings.autothread")
-        await self.load_extension("cogs.settings.settingpage")
+        #await self.load_extension("cogs.devpage")
+        #await self.load_extension("cogs.settings.autothread")
+        #await self.load_extension("cogs.settings.settingpage")
 
-        await self.load_extension("cogs.info_only.bot_info")
-        await self.load_extension("cogs.info_only.user_info")
+        #await self.load_extension("cogs.info_only.bot_info")
+        #await self.load_extension("cogs.info_only.user_info")
 
 client = MyBot()
 
+def load_extensions(directory, package_name="cogs"):
+    for filename in os.listdir(directory):
+        if filename.endswith(".py"):
+            extension = f"{package_name}.{filename[:-3]}"
+            asyncio.run(client.load_extension(extension))
+        elif os.path.isdir(os.path.join(directory, filename)):
+            load_extensions(os.path.join(directory, filename), f"{package_name}.{filename}")
+
+if __name__ == "__main__":
+    load_extensions("cogs")
+
 @client.command()
 @commands.guild_only()
-async def sync(ctx, guilds: Greedy[discord.Object], spec: Optional[Literal["gl"]] = None) -> None:
+async def sync(ctx, guilds: Greedy[discord.Object], spec: Optional[Literal["local"]] = None) -> None:
     if ctx.author.id == config.USER_ME_ID:
         try:
             if not guilds:
-                if spec == "gl":
-                    synced = await ctx.bot.tree.sync()
-                else:
+                if spec == "local":
                     synced = await ctx.bot.tree.sync(guild=ctx.guild)
+                else:
+                    synced = await ctx.bot.tree.sync()
 
                 return await ctx.send(
-                    f"**Syncronisierung - {'Global' if spec is not None else 'Server'}**\n"
-                    f"{len(synced)} application_commands wurden mit dem `@app_command.{'global' if spec is not None else 'local'}-tree` Syncronisiert."
+                    f"**Syncronisierung - {'Local' if spec is not None else 'Global'}**\n"
+                    f"{len(synced)} application_commands wurden mit dem `@app_command.{'local' if spec is not None else 'global'}-tree` Syncronisiert."
                 )
         except Exception as e:
             return await ctx.send(f"**Syncronisierung Fehlgeschlagen!**\nRatelimit exceeded. Bitte versuche es in einpaar Minuten erneut.```{e}```")
