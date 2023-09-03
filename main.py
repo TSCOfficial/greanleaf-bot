@@ -49,15 +49,6 @@ class MyBot(commands.Bot):
         self.add_view(error_rapport_del())
         self.add_view(setting_buttons())
         self.add_view(goto_settinghome())
-    
-        #await self.load_extension("config")
-
-        #await self.load_extension("cogs.devpage")
-        #await self.load_extension("cogs.settings.autothread")
-        #await self.load_extension("cogs.settings.settingpage")
-
-        #await self.load_extension("cogs.info_only.bot_info")
-        #await self.load_extension("cogs.info_only.user_info")
 
 client = MyBot()
 

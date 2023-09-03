@@ -12,29 +12,28 @@
             - [x] Slashcommand
             - [x] Database
                 - Opens a window with all possible settings
-            - [ ] ThreadName
-                - [ ] Slashcommand
-                - [ ] Callback for AutoThread-setting Embed
-                - [ ] Modal "Thread optionen"
-            - [ ] Thead first message
-                - [ ] Slashcommand
-                - [ ] Callback for AutoThread-setting Embed
-                - [ ] Modal "Thread optionen"
+            - [] ThreadName
+                - [x] Slashcommand
+                - [x] Callback for AutoThread-setting Embed
+                - [ ] slashcommand select type, open modal for type text
+            - [x] Thead first message
+                - [x] Slashcommand
+                - [x] Callback for AutoThread-setting Embed
             - [ ] Thread Cooldown
-                - [ ] Slashcommand
-                - [ ] Callback for AutoThread-setting Embed
-                - [ ] Modal "Thread optionen": str option, in seconds
-            - [ ] Charachter limit for creating Thread
+                - [x] Slashcommand
+                - [x] Callback for AutoThread-setting Embed
+            - [x] Charachter limit for creating Thread
         - [ ] Auto Theadrename
             - Automaticly Edit Threadnames from any created User to a form
-            - [ ] Slashcommand
-            - [ ] Callback for AutoThread-setting Embed
+            - [x] Slashcommand
                 - Use 3 Slash options as placeholder
                 - Possible Options:
                     - username
                     - user id
                     - custom Text
                     - date (dd/mm/yyyy)
+            - [x] Callback for AutoThread-setting Embed
+            - [x] verify functionality in Forum Channels
         - [ ] Logs
             - [ ] Slashcommand
             - [ ] Database
@@ -61,6 +60,8 @@
                     - Auto Move if support talk members < discord member talk limit
                         - Sends custom Message in that Support Talk Chat (or if automove deactivated, current Talk)
                         - Send custom mention in a selected channel (Ex.: Team-Chat)
+        - [ ] add custom commands
+            - Supports options
 
 ### Others
 - [x] Bot Info
@@ -79,4 +80,10 @@
 - [ ] Giveaway
     - [ ] Slashcommand
     - [ ] Database
+- [ ] add/remove roles
+- [ ] channel editor
+    - [ ] supports massedit
+        - set max channel limit bc API limit
+    - [ ] edit all possible things in channels
+- [ ] 
 
