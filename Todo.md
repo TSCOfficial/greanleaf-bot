@@ -9,10 +9,12 @@
     - [x] Slashcommand for group
     - [ ] Opens a window with all possible settings
         - [ ] AutoThread
+            - [ ] Supports also Forum Posts
             - [x] Slashcommand
             - [x] Database
                 - Opens a window with all possible settings
-            - [] ThreadName
+            - [ ] Send a "solved?" message after x minutes. No reply in y minutes, autoclose.
+            - [ ] ThreadName
                 - [x] Slashcommand
                 - [x] Callback for AutoThread-setting Embed
                 - [ ] slashcommand select type, open modal for type text
